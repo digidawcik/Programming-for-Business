@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    /* General Page Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #8a0c7f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #a11896;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    /* Main Content Area */
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      min-height: 70vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+      width: 420px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    /* Inline radio/checkbox options */
+    .inline-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .inline-options label {
+      font-weight: normal;
+      display: flex;
+      gap: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* Button Styling */
+    button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+
+    /* Footer */
+    footer {
+      background: #8a0c7f;
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Steven</h1>
+    <p>Registration Page</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Register</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <form id="regForm">
+      <h2>Registration Form</h2>
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label>Gender</label>
+      <div class="inline-options">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Chair"> Chair</label>
+      </div>
+
+      <label>Hobbies</label>
+      <div class="inline-options">
+        <label><input type="checkbox" name="hobbies" value="Sleeping"> Sleeping</label>
+        <label><input type="checkbox" name="hobbies" value="Running"> Running</label>
+        <label><input type="checkbox" name="hobbies" value="Boxing"> Boxing</label>
+      </div>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="program">Program of Study</label>
+      <select id="program" name="program" required>
+        <option value="" disabled selected>Select a program</option>
+        <option value="Information Systems">Information Systems</option>
+        <option value="Business">Business</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Design">Design</option>
+      </select>
+
+      <label for="address">Full Address</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Website Steven Kece</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("regForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form submitted successfully!");
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
